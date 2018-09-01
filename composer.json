@@ -1,0 +1,13 @@
+{
+    "name": "goralex97/dates",
+    "description": "Find days number from birthday to days",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "goralex97",
+            "email": "5267720@gmail.com"
+        }
+    ],
+    "require": {}
+}

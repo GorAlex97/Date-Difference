@@ -1,3 +1,4 @@
 .git
 .ssh
 id_rsa.pub
+/vendor/

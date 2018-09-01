@@ -1,12 +1,12 @@
 #!/usr/bin/env php
 <?php
 
-include 'src/Dates/run.php';
+include'src/Dates/run.php';
 
-$birthDate = "1997-06-06";
+$birthDate = '1997-06-06';
 $days = new \GorAlex97\Dates\VagrantPhp($birthDate);
 $totalDays = $days->findTotalDays();
 
-echo "$birthDate : $totalDays\n";
+echo $birthDate.' : '.$totalDays."\n";
 
 ?>
