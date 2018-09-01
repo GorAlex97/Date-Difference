@@ -9,5 +9,10 @@
             "email": "5267720@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "GorAlex97\\" : "src"
+        }
+    }
 }
