@@ -1,1 +1,1 @@
-* Vagrant PHP *
+* Vagrant PHP
