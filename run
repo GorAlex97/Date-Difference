@@ -3,7 +3,8 @@
 
 	require_once 'vendor/autoload.php';
 
-	$birthDate = '1997-06-06';
+	$opts = getopt('b:');
+	$birthDate = $opts['b'] ?? '1997-06-06';
 	$days = new \GorAlex97\Dates\VagrantPhp($birthDate);
 	$totalDays = $days->findTotalDays();
 
