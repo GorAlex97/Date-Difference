@@ -26,19 +26,20 @@
 
 #### При установке на Unix:
 
-	Загрузка с Packagist:
+Загрузка с Packagist:
+```
 >$ sudo apt update
 >$ sudo apt install curl php-cli php-mbstring git unzip
 >$ cd /путь к папке с проектом
 >$ curl -sS https://getcomposer.org/installer -o composer-setup.php
 >$ composer require goralex97/date-difference
-
-	Загрузка с Git - репозитория:
-	
+```
+Загрузка с Git - репозитория:
+```
 >$ sudo apt-get update
 >$ sudo apt-get upgrade
 >$ sudo apt-get install git
-
+```
 ## Использование на WEB (PHP)
 
 Для работы с библиотекой, необходимо распаковать содержимое этого репозитория  в корень вашего проекта, и использовать файл index.php, для вывода результата.
