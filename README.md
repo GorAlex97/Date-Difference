@@ -1,7 +1,7 @@
 # Date Difference [DD]
 
 
-<img src="./src/preview.jpg" data-canonical-src="./src/preview.jpg" width="100%" height="100%" alt="preview" />
+<img src="./docs/preview.jpg" data-canonical-src="./docs/preview.jpg" width="100%" height="100%" alt="preview" />
 
 # Описание
 
