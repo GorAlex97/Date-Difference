@@ -1,1 +1,13 @@
+
+title: Date Difference [DD]
+description: Find days number from birthday to days.
+google_analytics: 
+show_downloads: true
 theme: jekyll-theme-leap-day
+
+gems:
+  - jekyll-mentions
+
+github:
+zip_url: https://github.com/GorAlex97/Date-Difference/master
+tar_url: https://github.com/GorAlex97/Date-Difference/master
