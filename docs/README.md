@@ -11,7 +11,7 @@
 
 - Работает на Web (PHP) и UNIX платформах
 - Проста в использовании
- - Полностью бесплатна
+- Полностью бесплатна
 
 ## Необходимые инструменты 
 
@@ -26,19 +26,19 @@
 
 #### При установке на Unix:
 
-	Загрузка с Packagist:
+Загрузка с Packagist:
 ```
-	$ sudo apt update
-	$ sudo apt install curl php-cli php-mbstring git unzip
-	$ cd /путь к папке с проектом
-	$ curl -sS https://getcomposer.org/installer -o composer-setup.php
-	$ composer require goralex97/date-difference
+$ sudo apt update
+$ sudo apt install curl php-cli php-mbstring git unzip
+$ cd /путь к папке с проектом
+$ curl -sS https://getcomposer.org/installer -o composer-setup.php
+$ composer require goralex97/date-difference
 ```
-	Загрузка с Git - репозитория:
-```	
-	$ sudo apt-get update
-	$ sudo apt-get upgrade
-	$ sudo apt-get install git
+Загрузка с Git - репозитория:
+```
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install git
 ```
 ## Использование на WEB (PHP)
 
@@ -46,65 +46,71 @@
 
 По-умолчанию файл index.php, выдаст результат:
 ```
-	1997-06-06 : 1234567
+1997-06-06 : 1234567
 ```
 Для вывода результата со своей датой, необходимо использовать GET параметр "d":
 
 #### *Пример:*
 ```
-	https://localhost/?d=1970-01-01
+https://localhost/?d=1970-01-01
 
-	Дата указывается в формате ГГГГ-ММ-ДД, где Г - год, М - месяц, Д - день
+Дата указывается в формате ГГГГ-ММ-ДД, где Г - год, М - месяц, Д - день
 ```
 Для вывода результата из даты заготовленной в dates.ini, необходимо использовать GET параметр "n":
 
 #### *Пример:*
 ```
-	https://localhost/?n=alex
+https://localhost/?n=alex
 
-	Выведет 1997-06-06 : 1234567
+Выведет 1997-06-06 : 1234567
 ```
+
 ### Формат файла dates.ini
 ```
-	[dates]
-	username = birthday date
+[dates]
+username = birthday date
 ```
+
 #### *Пример:*
 ```
-	[dates]
-	alex = 1997.06.06
-	unixtime - 1970.01.01
+[dates]
+alex = 1997.06.06
+unixtime - 1970.01.01
 ```
+
 ## Использование на UNIX
 
 Для работы с библиотекой, необходимо перейти в папку с ней, и запустить с помощью команды "./run". Это выведет результат от предустановленной по-умолчанию даты "6 июня 1997". Для вывода результата со своей датой, необходимо использовать параметр "-d".
 	
 #### *Пример:*
 ```
-	$ ./run -d 1970-01-01
+$ ./run -d 1970-01-01
 
-	Дата указывается в формате ГГГГ-ММ-ДД, где Г - год, М - месяц, Д - день
+Дата указывается в формате ГГГГ-ММ-ДД, где Г - год, М - месяц, Д - день
 
-	Выведет 0
+Выведет 0
 ```
+
 Для выбора даты из заранее заданных в файле dates.ini, необходимо использовать команду "-n".
 
 #### *Пример:*
 ```
-	$ ./run -n alex
-
-	Выведет 1997-06-06 : 1234567
+$ ./run -n alex
+ 
+Выведет 1997-06-06 : 1234567
 ```
+
 ### Формат файла dates.ini
 ```
->>[dates]
->>username = birthday date
+[dates]
+username = birthday date
 ```
+
 #### *Пример:*
 ```
-	[dates]
-	alex = 1997.06.06
-	unixtime - 1970.01.01
+[dates]
+alex = 1997.06.06
+unixtime - 1970.01.01
 ```
 
 ## Лицензия

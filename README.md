@@ -1,7 +1,7 @@
 # Date Difference [DD]
 
 
-<img src="src/preview.jpg" data-canonical-src="src/preview.jpg" width="100%" height="100%" alt="preview" />
+<img src="./src/preview.jpg" data-canonical-src="./src/preview.jpg" width="100%" height="100%" alt="preview" />
 
 # Описание
 
@@ -54,8 +54,7 @@ $ sudo apt-get install git
 ```
 https://localhost/?d=1970-01-01
 
-Дата указывается в формате ГГГГ-ММ-ДД, где 
-Г - год, М - месяц, Д - день
+Дата указывается в формате ГГГГ-ММ-ДД, где Г - год, М - месяц, Д - день
 ```
 Для вывода результата из даты заготовленной в dates.ini, необходимо использовать GET параметр "n":
 
