@@ -31,7 +31,7 @@
 >$ sudo apt install curl php-cli php-mbstring git unzip
 >$ cd /путь к папке с проектом
 >$ curl -sS https://getcomposer.org/installer -o composer-setup.php
->$ composer require goralex97/dates
+>$ composer require goralex97/date-difference
 
 	Загрузка с Git - репозитория:
 	
