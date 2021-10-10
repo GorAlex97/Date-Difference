@@ -1,37 +1,122 @@
-## Welcome to GitHub Pages
+# Date Difference
 
-You can use the [editor on GitHub](https://github.com/GorAlex97/Date-Difference/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<img src="https://github.com/GorAlex97/Date-Difference/blob/master/docs/preview.jpg?raw=true" data-canonical-src="https://github.com/GorAlex97/Date-Difference/blob/master/docs/preview.jpg?raw=true" width="100%" height="100%" alt="preview" />
 
-### Markdown
+# Описание
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+**Date Difference** - это php библиотека способная высчитать количество секунд прошедших с заданной даты рождения.
 
-```markdown
-Syntax highlighted code block
+## Особенности библиотеки
 
-# Header 1
-## Header 2
-### Header 3
+- Работает на Web (PHP) и UNIX платформах
+- Проста в использовании
+- Полностью бесплатна
 
-- Bulleted
-- List
+## Необходимые инструменты 
 
-1. Numbered
-2. List
+#### Для использования библиотеки достаточно иметь установленный PHP версии 7.2
+> При использовании в UNIX, может потребоваться Git или Composer для загрузки библиотеки из репозитория.
 
-**Bold** and _Italic_ and `Code` text
+# Установка
 
-[Link](url) and ![Image](src)
+#### При установке на Web:
+
+>> Достаточно иметь предустановленный PHP 7.2.
+
+#### При установке на Unix:
+
+Загрузка с Packagist:
+```
+$ sudo apt update
+$ sudo apt install curl php-cli php-mbstring git unzip
+$ cd /путь к папке с проектом
+$ curl -sS https://getcomposer.org/installer -o composer-setup.php
+$ composer require goralex97/date-difference
+```
+Загрузка с Git - репозитория:
+```
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install git
+```
+# Использование на WEB (PHP)
+
+Для работы с библиотекой, необходимо распаковать содержимое этого репозитория  в корень вашего проекта, и использовать файл index.php, для вывода результата.
+
+По-умолчанию файл index.php, выдаст результат:
+```
+1997-06-06 : 1234567
+```
+Для вывода результата со своей датой, необходимо использовать GET параметр "d":
+
+#### *Пример:*
+```
+https://localhost/?d=1970-01-01
+
+Дата указывается в формате ГГГГ-ММ-ДД, где Г - год, М - месяц, Д - день
+```
+Для вывода результата из даты заготовленной в dates.ini, необходимо использовать GET параметр "n":
+
+#### *Пример:*
+```
+https://localhost/?n=alex
+
+Выведет 1997-06-06 : 1234567
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Формат файла dates.ini
+```
+[dates]
+username = birthday date
+```
 
-### Jekyll Themes
+#### *Пример:*
+```
+[dates]
+alex = 1997.06.06
+unixtime - 1970.01.01
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/GorAlex97/Date-Difference/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+# Использование на UNIX
 
-### Support or Contact
+Для работы с библиотекой, необходимо перейти в папку с ней, и запустить с помощью команды "./run". Это выведет результат от предустановленной по-умолчанию даты "6 июня 1997". Для вывода результата со своей датой, необходимо использовать параметр "-d".
+	
+#### *Пример:*
+```
+$ ./run -d 1970-01-01
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Дата указывается в формате ГГГГ-ММ-ДД, где Г - год, М - месяц, Д - день
+
+Выведет 0
+```
+
+Для выбора даты из заранее заданных в файле dates.ini, необходимо использовать команду "-n".
+
+#### *Пример:*
+```
+$ ./run -n alex
+ 
+Выведет 1997-06-06 : 1234567
+```
+
+### Формат файла dates.ini
+```
+[dates]
+username = birthday date
+```
+
+#### *Пример:*
+```
+[dates]
+alex = 1997.06.06
+unixtime - 1970.01.01
+```
+
+# Лицензия
+MIT
+
+
+<img src="https://pbs.twimg.com/profile_images/809440973747093505/TqitYJrY_400x400.jpg" data-canonical-src="https://pbs.twimg.com/profile_images/809440973747093505/TqitYJrY_400x400.jpg" width="150" height="150" alt="Packagist" />
+
+Доступно на [Packagist](https://packagist.org/packages/goralex97/dates)
